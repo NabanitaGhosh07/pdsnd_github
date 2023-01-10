@@ -1,17 +1,24 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Udacity: Programming for Data Science with R Nanodegree Programme
 
-### Date created
-Include the date you created this project and README file.
+### *Date created:*
+10th January 2023
 
-### Project Title
-Replace the Project Title
+### *Project Title:*
+Explore BikeShare Data with R
 
-### Description
-Describe what your project is about and what it does
+### *Description:*
+In this project, we used data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. We compared the system usage between three large cities: Chicago, New York City, and Washington, DC using R. We explored different areas of the dataset such as : <br>
+a) Popular times of travel <br>
+b) Popular stations and trips <br>
+c) Trip Duration , and <br>
+d) User info <br>
 
-### Files used
-Include the files used
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+### *Files used:*
+3 .CSV files named: chicago.csv, new-york-city.csv, washington.csv
+
+### *Credits:*
+a) YouTube video Tutorials by 'The Coding Train' and <br>
+b) https://r-graph-gallery.com/web-horizontal-barplot-with-labels-the-economist.html
+
 
