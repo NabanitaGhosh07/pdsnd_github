@@ -1,5 +1,7 @@
+#------------------UDACITY NANODEGREE PROGRAMME FOR DATA SCIENCE IN R----------------------------------------------
+#--------------------------------Udacity Bike Share Data-----------------------------------------------------------
 
-#--------------------------------Udacity Bike Share Data------------------------------------
+
 setwd("~/LEARNING/Udacity/R Project")
 #Reading the 3 city files into R
 ny <- read.csv('C:/Users/NGhosh3/OneDrive - JNJ/Documents/LEARNING/Udacity/R Project/new-york-city.csv')
