@@ -68,6 +68,9 @@ total$Start.Time.Hour=as.integer(hour(total$Start.Time))
 total$Start.Time.Hour
 typeof(total$Start.Time.Hour) #Check to see if data type changed correctly
 
+print(" We are exploring and analyzing BikeShare Data in R")
+print(" Major focus on 3 cities of US : Chicago, Washington and New York City")
+
 #1) POPULAR TIMES OF TRAVEL-
 #a) What is the most common month? - Creating a bar graph from the month column based on it's count
 #Observation - June is the month where most travel has started
