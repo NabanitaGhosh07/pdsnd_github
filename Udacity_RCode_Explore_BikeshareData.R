@@ -1,6 +1,6 @@
 #------------------UDACITY NANODEGREE PROGRAMME FOR DATA SCIENCE IN R----------------------------------------------
 #--------------------------------Udacity Bike Share Data-----------------------------------------------------------
-
+#-------------------------------Last Update : 10-Jan-2023----------------------------------------------------------
 
 setwd("~/LEARNING/Udacity/R Project")
 #Reading the 3 city files into R
@@ -8,17 +8,16 @@ ny <- read.csv('C:/Users/NGhosh3/OneDrive - JNJ/Documents/LEARNING/Udacity/R Pro
 wash = read.csv('C:/Users/NGhosh3/OneDrive - JNJ/Documents/LEARNING/Udacity/R Project/washington.csv')
 chi = read.csv('C:/Users/NGhosh3/OneDrive - JNJ/Documents/LEARNING/Udacity/R Project/chicago.csv')
 
-
 library(lubridate)
 library(ggplot2)
 #install.packages(“dplyr”)
 library(dplyr)
 
-
-#Combining the 3 datasets
-#Creating 3 new columns Gender,BirthYear & City in Washington. Gender & BirthYear have no values. 
-#City will help to distinguish Datasets once union-ed together
-#Renaming 1st Column Name to ID instead of Blank
+#Below code does the following steps:
+#a) Combining the 3 datasets
+#b) Creating 3 new columns Gender,BirthYear & City in Washington. Gender & BirthYear have no values. 
+#c) City will help to distinguish Datasets once union-ed together
+#d) Renaming 1st Column Name to ID instead of Blank
 
 Gen=""
 Birth.Yr=""
@@ -67,6 +66,9 @@ typeof(total$Start.Time.wkday) #Check to see if data type changed correctly
 total$Start.Time.Hour=as.integer(hour(total$Start.Time))
 total$Start.Time.Hour
 typeof(total$Start.Time.Hour) #Check to see if data type changed correctly
+
+print(" We are exploring and analyzing BikeShare Data in R")
+print(" Major focus on 3 cities of US : Chicago, Washington and New York City")
 
 #1) POPULAR TIMES OF TRAVEL-
 #a) What is the most common month? - Creating a bar graph from the month column based on it's count
@@ -148,8 +150,6 @@ ggplot(common_End_Station, aes(x=End.Station,y=count_station,color=City, fill=Ci
 start_end<- total %>% group_by(City,Start.Station,End.Station) %>% summarize(count_station=n()) %>% arrange(desc(count_station)) 
 print(start_end)
 
-# Make Combo and then create the graph
-
 #3 Trip duration
 
 # a) What is the total travel time for users in different cities?
@@ -190,7 +190,6 @@ ggplot(user_counts, aes(y=counts, x=User.Type, color=User.Type, fill=User.Type))
   geom_text(aes(label = counts), position=position_dodge(width=1), vjust=1, hjust=1, color='black',angle=90)+
   facet_grid(~City)
 
-
 # b)  What are the counts of each gender (only available for NYC and Chicago)?
 # Observation - In this question I have split the response in 2: 
 # i) The overall counts of each gender across all cities
@@ -215,3 +214,5 @@ cat("The earliest year of birth in the dataset is :" , min(as.integer(total$Birt
 cat("The most recent year of birth in the dataset is :" , max(as.integer(total$Birth.Year),na.rm=TRUE))
 recent_year <-total %>% group_by(Birth.Year) %>% summarize(counts=n()) %>% arrange(desc(counts))
 cat("The most common year of birth in the dataset is :" , recent_year[3,1]%>% pull())
+
+#--------------------------End of Analysis----------------------------------------------------------------------
