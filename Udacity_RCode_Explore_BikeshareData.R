@@ -12,11 +12,11 @@ library(ggplot2)
 #install.packages(“dplyr”)
 library(dplyr)
 
-
-#Combining the 3 datasets
-#Creating 3 new columns Gender,BirthYear & City in Washington. Gender & BirthYear have no values. 
-#City will help to distinguish Datasets once union-ed together
-#Renaming 1st Column Name to ID instead of Blank
+#Below code does the following steps:
+#a) Combining the 3 datasets
+#b) Creating 3 new columns Gender,BirthYear & City in Washington. Gender & BirthYear have no values. 
+#c) City will help to distinguish Datasets once union-ed together
+#d) Renaming 1st Column Name to ID instead of Blank
 
 Gen=""
 Birth.Yr=""
